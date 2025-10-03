@@ -1,4 +1,4 @@
-# 📀 D-SOUND
+# 📀 D-Sound
 
 D-Sound é um reprodutor de música local simples e funcional, desenvolvido para tocar arquivos de áudio diretamente do seu dispositivo.
 A proposta do projeto é oferecer uma interface limpa e prática, sem depender de conexões externas ou serviços de streaming.
