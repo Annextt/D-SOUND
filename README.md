@@ -3,7 +3,7 @@
 D-Sound é um reprodutor de música local simples e funcional, desenvolvido para tocar arquivos de áudio diretamente do seu dispositivo.
 A proposta do projeto é oferecer uma interface limpa e prática, sem depender de conexões externas ou serviços de streaming.
 
-✨ Funcionalidades
+# ✨ Funcionalidades
 
 🎵 Reprodução de músicas locais (MP3, WAV, etc.)
 
@@ -15,11 +15,11 @@ A proposta do projeto é oferecer uma interface limpa e prática, sem depender d
 
 🎨 Interface simples e intuitiva
 
-🚀 Objetivo
+# 🚀 Objetivo
 
 Criado como projeto pessoal para prática e estudo de desenvolvimento, o D-Sound busca unir utilidade e aprendizado, servindo de base para futuras melhorias como playlists, equalizador e suporte a mais formatos.
 
-🛠️ Como usar
+# 🛠️ Como usar
 
 Baixe suas músicas favoritas no seu dispositivo.
 
