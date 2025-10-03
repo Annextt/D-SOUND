@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Music App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header>
+      <h2>D-Sound</h2>
+      <i class="bx bx-search"></i>
+    </header>
+
+   
+
+    <!-- Opções -->
+    <section class="options">
+      <div class="option" id="opt-playlists">
+        <i class="bx bx-list-ul"></i>
+        <span>Playlists</span>
+        <i class="bx bx-chevron-right"></i>
+      </div>
+    </section>
+
+    <!-- VIEW: Playlists -->
+    <section id="view-playlists" class="view hidden">
+      <div class="topbar">
+        <button id="btn-back" class="btn-link"><i class="bx bx-left-arrow-alt"></i> Back</button>
+        <h2>Playlists</h2>
+      </div>
+
+      <div class="playlists-header">
+        <button id="btn-create-playlist" class="btn-primary">+ Create Playlist</button>
+      </div>
+
+      <ul id="playlist-list" class="playlist-list"></ul>
+    </section>
+
+     <section id="view-skins" class="view hidden">
+      <div class="topbar">
+        <button id="btn-back-skins" class="btn-link"><i class="bx bx-left-arrow-alt"></i> Back</button>
+        <h2>Escolher Tema</h2>
+      </div>
+
+      <div class="skins-container">
+        <div class="skin-card" data-theme="gothic">
+          <div class="skin-preview gothic-preview">
+            <div class="preview-header">
+              <h4>Gothic Dark</h4>
+            </div>
+            <div class="preview-content">
+              <div class="preview-card"></div>
+              <div class="preview-card"></div>
+            </div>
+            <div class="preview-player">
+              <div class="preview-controls">
+                <span>♪</span>
+                <span>♫</span>
+                <span>♪</span>
+              </div>
+            </div>
+          </div>
+          <div class="skin-info">
+            <h3>Gothic Dark</h3>
+            <p>Tema sombrio com atmosfera gótica, cores vermelhas sangue e dourados ornamentais.</p>
+            <button class="btn-select-skin" data-theme="gothic">Selecionar Tema</button>
+          </div>
+        </div>
+
+        <div class="skin-card" data-theme="cyberpunk">
+          <div class="skin-preview cyberpunk-preview">
+            <div class="preview-header">
+              <h4>Cyberpunk</h4>
+            </div>
+            <div class="preview-content">
+              <div class="preview-card"></div>
+              <div class="preview-card"></div>
+            </div>
+            <div class="preview-player">
+              <div class="preview-controls">
+                <span>◀</span>
+                <span>▶</span>
+                <span>▶▶</span>
+              </div>
+            </div>
+          </div>
+          <div class="skin-info">
+            <h3>Cyberpunk</h3>
+            <p>Tema futurista com neons vibrantes, efeitos de partículas e estética cyberpunk.</p>
+            <button class="btn-select-skin" data-theme="cyberpunk">Selecionar Tema</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu inferior -->
+    <nav class="bottom-nav">
+      <a href="index.html"><i class="bx bx-home"></i><span>Home</span></a>
+      
+      <a href="#" class="active"><i class="bx bx-library"></i><span>Library</span></a>
+      <a href="#"><i class="bx bx-music"></i><span>Musics</span></a>
+      <a href="#"><i class="bx bx-menu"></i><span>More</span></a>
+    </nav>
+  </div>
+
+  <!-- Player -->
+  <div class="player">
+    <h3 id="musicName">Música atual</h3>
+    <audio id="audio"></audio>
+
+    <div class="controls">
+      <button id="prev"><i class='bx bx-skip-previous'></i></button>
+      <button id="play"><i class='bx bx-play'></i></button>
+      <button id="next"><i class='bx bx-skip-next'></i></button>
+    </div>
+
+    <div class="progress-container">
+      <div id="progress"></div>
+    </div>
+    <div class="time">
+      <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+    </div>
+  </div>
+
+  <!-- Lista de músicas -->
+  <div class="playlist">
+    <h3>Playlist</h3>
+    <ul id="playlist"></ul>
+  </div>
+
+  <!-- Player Modal -->
+  <div id="playerModal" class="player-modal">
+    <div class="player-content">
+      <span id="closePlayer" class="close">&times;</span>
+      <h2 id="playerTitle">Tocando agora</h2>
+      <audio id="playlistAudio" controls></audio>
+      <div class="controls">
+        <button id="playlistPrev"><i class="bx bx-skip-previous"></i></button>
+        <button id="playlistPlay"><i class="bx bx-play"></i></button>
+        <button id="playlistNext"><i class="bx bx-skip-next"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
